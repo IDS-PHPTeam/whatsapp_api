@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteRule ^api/([A-Za-z0-9_-]+)/?$ index.php?action=$1 [QSA,L]
+
+<FilesMatch "^(config\.php|config\.example\.php|config\.local\.php)$">
+    Require all denied
+</FilesMatch>
